@@ -1,3 +1,5 @@
+![](https://img.shields.io/badge/status-awesome-orange.svg?style=flat-square)
+
 # Game of life in React & ES6
 
 This is just an exercise to check some best practices in React 0.13.* using ES6 (babel).
