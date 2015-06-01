@@ -6,17 +6,17 @@ describe('GameLogic', () => {
   describe('#next -> flicker', () => {
     it('should return next state', () => {
       var first = new GameLogic(patterns.flicker.horizontal);
-      assert.deepEqual(first.next(), patterns.flicker.vertical);
+      assert.deepEqual(first.next, patterns.flicker.vertical);
 
       var second = new GameLogic(patterns.flicker.vertical);
-      assert.deepEqual(second.next(), patterns.flicker.horizontal);
+      assert.deepEqual(second.next, patterns.flicker.horizontal);
     });
   });
 
   describe('#next -> square', () => {
     it('should return next state', () => {
       var first = new GameLogic(patterns.square);
-      assert.deepEqual(first.next(), patterns.square);
+      assert.deepEqual(first.next, patterns.square);
     });
   });
 });

@@ -12,17 +12,17 @@ export default class GameLogic {
     this.newBornsFor = this.newBornsFor.bind(this);
   }
 
-  next() {
-    return this.survivors().concat(this.newBorns());
+  get next() {
+    return this.survivors.concat(this.newBorns);
   }
 
   // private
 
-  newBorns() {
+  get newBorns() {
     return unique(_.flatten(_.map(this.livingCells, this.newBornsFor)));
   }
 
-  survivors() {
+  get survivors() {
     return _.filter(this.livingCells, this.survive);
   }
 

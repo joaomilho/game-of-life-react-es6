@@ -14,11 +14,11 @@ export default class Game extends React.Component {
   }
 
   tick() {
-    this.setState({livingCells: this.newLivingCells()});
+    this.setState({livingCells: this.newLivingCells});
   }
 
-  newLivingCells() {
-    return new GameLogic(this.state.livingCells).next();
+  get newLivingCells() {
+    return new GameLogic(this.state.livingCells).next;
   }
 
   render() {

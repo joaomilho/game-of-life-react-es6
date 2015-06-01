@@ -33996,12 +33996,12 @@ var Board = (function (_React$Component) {
       return _reactAddons2['default'].createElement(
         'div',
         null,
-        this.renderCells()
+        this.renderCells
       );
     }
   }, {
     key: 'renderCells',
-    value: function renderCells() {
+    get: function () {
       return _lodash2['default'].map(this.props.cells, this.renderCell);
     }
   }, {
@@ -34129,12 +34129,12 @@ var Game = (function (_React$Component) {
   _createClass(Game, [{
     key: 'tick',
     value: function tick() {
-      this.setState({ livingCells: this.newLivingCells() });
+      this.setState({ livingCells: this.newLivingCells });
     }
   }, {
     key: 'newLivingCells',
-    value: function newLivingCells() {
-      return new _game_logicEs62['default'](this.state.livingCells).next();
+    get: function () {
+      return new _game_logicEs62['default'](this.state.livingCells).next;
     }
   }, {
     key: 'render',
@@ -34183,20 +34183,20 @@ var GameLogic = (function () {
 
   _createClass(GameLogic, [{
     key: "next",
-    value: function next() {
-      return this.survivors().concat(this.newBorns());
+    get: function () {
+      return this.survivors.concat(this.newBorns);
     }
   }, {
     key: "newBorns",
 
     // private
 
-    value: function newBorns() {
+    get: function () {
       return (0, _utilsEs6.unique)(_lodash2["default"].flatten(_lodash2["default"].map(this.livingCells, this.newBornsFor)));
     }
   }, {
     key: "survivors",
-    value: function survivors() {
+    get: function () {
       return _lodash2["default"].filter(this.livingCells, this.survive);
     }
   }, {

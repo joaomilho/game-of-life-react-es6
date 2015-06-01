@@ -4,10 +4,10 @@ import Cell from './cell.es6';
 
 export default class Board extends React.Component {
   render() {
-    return <div>{ this.renderCells() }</div>;
+    return <div>{ this.renderCells }</div>;
   }
 
-  renderCells() {
+  get renderCells() {
     return _.map(this.props.cells, this.renderCell);
   }
 
